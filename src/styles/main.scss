@@ -1,7 +1,330 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "reset";
 
-body {
-  background: $c-gray;
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  background-color: rgba(194, 204, 209, 1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background: linear-gradient(0deg, #2f4858, #2f4858), #fff;
+  border-bottom: 1px solid rgba(72, 105, 126, 1);
+
+  &__logo {
+    min-width: 343px;
+  }
+
+  &__nav-link {
+    color: #fff;
+  }
+
+  &__call {
+    display: flex;
+    justify-content: space-between;
+    width: 326px;
+    margin-top: 18px;
+    border: 1px solid rgba(72, 105, 126, 1);
+  }
+
+  &__img-container {
+    display: flex;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: yellow;
+  }
+}
+
+.about {
+  padding: 0 40px 100px;
+  background: linear-gradient(0deg, #2f4858, #2f4858), #fff;
+
+  .vcard {
+    position: relative;
+    padding-left: 40px;
+    padding-top: 180px;
+    padding-bottom: 163px;
+    border: 1px solid #48697e;
+
+    &__title {
+      width: 751px;
+      height: 207px;
+      margin-bottom: 40px;
+      font-family: "Neutral Face", "Times New Roman", Times, serif;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 115%;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    &__text {
+      display: block;
+      width: 280px;
+      height: 66px;
+      font-family: "Roboto", "Times New Roman", Times, serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 160%;
+      color: #fff;
+    }
+
+    &__animation {
+      position: absolute;
+      right: 83px;
+      top: 54px;
+      width: 532px;
+      height: 532px;
+    }
+
+    &__animation-rectangle {
+      position: absolute;
+    }
+
+    &__animation-triangle {
+      position: absolute;
+    }
+
+    &__svg svg {
+      position: absolute;
+    }
+
+    &__svg-1 {
+      top: 103px;
+      left: 19px;
+    }
+
+    &__svg-2 {
+      top: 529px;
+      left: 80px;
+    }
+
+    &__svg-3 {
+      top: 24px;
+      left: 175px;
+    }
+
+    &__svg-4 {
+      top: 83px;
+      left: 441px;
+    }
+
+    &__svg-5 {
+      top: 576px;
+      left: 428px;
+    }
+
+    &__svg-6 {
+      top: 423px;
+      left: 638px;
+    }
+
+    &__svg-7 {
+      top: 82px;
+      right: 520px;
+    }
+
+    &__svg-8 {
+      top: 420px;
+      right: 120px;
+    }
+
+    &__svg-9 {
+      top: 120px;
+      right: 0;
+    }
+  }
+
+  .info {
+    position: relative;
+
+    &__about {
+      padding: 170px 60px 60px 40px;
+      width: 460px;
+      border-left: 1px solid rgba(72, 105, 126, 1);
+      border-right: 1px solid rgba(72, 105, 126, 1);
+    }
+
+    &__title {
+      width: 320px;
+      margin-bottom: 40px;
+      font-family: "Neutral Face", "Times New Roman", Times, serif;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 115%;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    &__title::before {
+      position: absolute;
+      top: 130px;
+      content: "Хто ми?";
+      font-family: "Roboto", "Times New Roman", Times, serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e3ed15;
+    }
+
+    &__text-container {
+      margin-left: 80px;
+    }
+
+    &__text-container::before {
+
+      position: absolute;
+      top: 304px;
+      left: 40px;
+      content: "";
+      width: 24px;
+      height: 1px;
+      background-color: #fff;
+    }
+
+    &__text {
+      width: 280px;
+      margin-bottom: 24px;
+      font-family: "Roboto", "Times New Roman", Times, serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 160%;
+      color: #fff;
+    }
+
+    &__licence {
+      display: flex;
+      position: relative;
+      width: 540px;
+      padding: 20px 0 40px 40px;
+      border: 1px solid rgba(72, 105, 126, 1);
+    }
+
+    &__licence-download {
+      margin-right: 40px;
+      padding-bottom: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+    }
+
+    &__licence-link {
+      margin-top: 10px;
+      padding-bottom: 4px;
+      text-decoration: none;
+      font-family: "Roboto", "Times New Roman", Times, serif;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      color: #e3ed15;
+      border-bottom: 1px solid #e3ed15;
+    }
+
+    &__licence-date {
+      display: block;
+      margin-bottom: 17px;
+      margin-top: 20px;
+      font-family: "Roboto", "Times New Roman", Times, serif;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      color: #9aacb8;
+    }
+
+    &__licence-type {
+      display: block;
+      width: 230px;
+      font-family: "Roboto", "Times New Roman", Times, serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 130%;
+      color: #fff;
+    }
+
+    &__buttons-container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80px;
+      height: 161px;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%;
+      border-left: 1px solid rgba(72, 105, 126, 1);
+    }
+
+    &__buttons-container .info__button:first-child {
+      border-bottom: 1px solid rgba(72, 105, 126, 1);
+    }
+
+    &__animation {
+      position: absolute;
+      top: 0;
+      right: 83px;
+    }
+
+    &__animation svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.services {
+  position: relative;
+  padding: 0 40px;
+
+  &__title {
+    position: relative;
+    padding: 170px 0 40px 40px;
+    font-family: "Neutral Face", "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 33px;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #48697e;
+    border-left: 1px solid #48697e;
+  }
+
+  &__title::before {
+    content: "Що ми робимо?";
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    font-family: "Roboto", "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  &__title::after {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #48697e;
+  }
 }
